@@ -1,0 +1,12 @@
+http://fex.baidu.com/ueditor/
+
+
+<script src="__ADMIN__/plug/ueditor/ueditor.config.js"></script>
+<script src="__ADMIN__/plug/ueditor/ueditor.all.min.js"></script>
+<script src="__ADMIN__/plug/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+//实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('content',{initialFrameWidth:685,initialFrameHeight:400,});
+
+	 <textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%; " rows="10"></textarea>
