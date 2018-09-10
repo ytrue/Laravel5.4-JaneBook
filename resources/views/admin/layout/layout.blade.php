@@ -47,7 +47,20 @@
                         </li>
 
                     </ul>
+                </li>
 
+                <li>
+                    <a href="#">
+                        <i class="fa fa-file-text"></i>
+                        <span class="nav-label">文章管理</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level ">
+                        <li>
+                            <a class="J_menuItem" href="/admin/posts/">文章列表</a>
+                        </li>
+
+                    </ul>
                 </li>
 
             </ul>

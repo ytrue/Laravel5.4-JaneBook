@@ -51,7 +51,7 @@ class PostController extends Controller
         $data=$request->input();
         $data['user_id']=\Auth::id();
         Post::create($data);
-        return redirect('/posts');
+        return redirect('/post');
 
 
     }
@@ -101,7 +101,7 @@ class PostController extends Controller
         $this->authorize('update',$post);
 
         $post->update(request(['title', 'content']));
-        return redirect("/posts/{$post->id}");
+        return redirect("/post/{$post->id}");
     }
 
     /**
@@ -120,14 +120,14 @@ class PostController extends Controller
     {
         $this->authorize('delete',$post);
         $post->delete();
-        return redirect("/posts");
+        return redirect("/post");
     }
 
     //评论
     public function comment()
     {
         $this->validate(request(),[
-            'post_id' => 'required|exists:posts,id',
+            'post_id' => 'required|exists:post,id',
             'content' => 'required|min:10',
         ]);
         $user_id = \Auth::id();

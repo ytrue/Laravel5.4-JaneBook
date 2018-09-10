@@ -21,7 +21,7 @@ class PostTableSeeder extends Seeder
             $tmp['created_at']=date('Y-m-d H:i:s');
             $data[]=$tmp;
         }
-        DB::table('posts')->insert($data);
+        DB::table('post')->insert($data);
 
     }
 }

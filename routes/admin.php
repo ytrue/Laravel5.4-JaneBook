@@ -10,10 +10,14 @@ Route::group(['prefix' => 'admin'], function() {
     Route::group(['middleware' => 'auth:admin'], function() {
 
         Route::get('/index', '\App\Admin\Controllers\Controller@layout');
-        //home
+        //home Route::post('/post/{post}/status', '\App\Admin\Controllers\PostController@status');
         Route::get('/home/index', '\App\Admin\Controllers\HomeController@index');
         //manage
         Route::resource('/users', '\App\Admin\Controllers\UserController');
+        //审核模块
+        Route::get('/posts', '\App\Admin\Controllers\PostController@index');
+        Route::post('/posts/{post}/status', '\App\Admin\Controllers\PostController@status');
+
 
     });
 });

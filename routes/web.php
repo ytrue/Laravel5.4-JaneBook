@@ -37,14 +37,14 @@ Route::get('/user/{user}/fan', '\App\Http\Controllers\UserController@fan');
 Route::get('/user/{user}/unfan', '\App\Http\Controllers\UserController@unfan');
 
 //评论
-Route::post('posts/comment','\App\Http\Controllers\PostController@comment');
+Route::post('post/comment','\App\Http\Controllers\PostController@comment');
 //赞
-Route::get('/posts/{post}/zan', '\App\Http\Controllers\PostController@zan');
-Route::get('/posts/{post}/unzan', '\App\Http\Controllers\PostController@unzan');
+Route::get('/post/{post}/zan', '\App\Http\Controllers\PostController@zan');
+Route::get('/post/{post}/unzan', '\App\Http\Controllers\PostController@unzan');
 
 //文章列表页
-Route::get('posts/{post}/delete','\App\Http\Controllers\PostController@delete');
-Route::resource('posts', '\App\Http\Controllers\PostController');
+Route::get('post/{post}/delete','\App\Http\Controllers\PostController@delete');
+Route::resource('post', '\App\Http\Controllers\PostController');
 
 //专题模块
 Route::get('/topic/{topic}','\App\Http\Controllers\TopicController@show');

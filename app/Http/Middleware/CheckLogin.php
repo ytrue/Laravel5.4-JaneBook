@@ -17,7 +17,7 @@ class CheckLogin
     {
         $key=\Auth::id();
         if ($key){
-            return redirect('/posts');
+            return redirect('/post');
         }
         return $next($request);
     }
